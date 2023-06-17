@@ -1,5 +1,5 @@
 {
-  "name": "com.emme.schede",
+  "name": "com.github.blurredheirloom.schedetelefoniche",
   "productName": "Schede Telefoniche",
   "version": "1.6.2",
   "private": true,
@@ -20,7 +20,7 @@
     "last 1 electron version"
   ],
   "build": {
-    "appId": "com.emme.schede",
+    "appId": "com.github.blurredheirloom.schedetelefoniche",
     "productName": "Schede Telefoniche",
     "icon": "./icon.png",
     "files": [
