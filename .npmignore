@@ -1,0 +1,6 @@
+_ignore/
+docs/
+builds/
+dist/
+.editorconfig
+.vscode/

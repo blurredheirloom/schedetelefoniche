@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Mono:wght@500&family=Ubuntu:wght@400;700&display=swap');
+
+th, h1, h2, h3, h4, h5, h6, html, body, label, span { font-family: 'Open Sans', sans-serif; }
+
+td, tr, input {
+	font-family: 'Roboto Mono', sans-serif !important;
+	color: #FAFAFA;
+}
+
+p {
+	padding: 0;
+	margin: 0;
+}
+
+thead { opacity: 1 !important; }
+
+th > div > div {
+	height: 64px;
+	margin-bottom: -16px;
+}
+
+th input {
+	padding: 0;
+	font-size: .75rem !important;
+}
+
+
+small {
+	font-size: .75rem !important;
+	font-family: 'Roboto Mono', sans-serif;
+}
+
+.mantine-Text-root, .mantine-InputWrapper-label {
+	text-transform: uppercase;
+	color: #FAFAFA;
+}
+
+
+.mantine-Indicator-root { margin: 0 .5rem; }
+
+.marketInput > div { margin-top: 1rem; }
+
+input {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: default !important;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.mantine-Paper-root > div:first-child { padding-top: 32px !important }
+
+.mantine-Paper-root > div > div:nth-child(2) { align-items: center !important;  }
+
+.marketLabel:disabled {
+	color: #FAFAFA;
+	border-radius: .2rem;
+	background: none;
+	border: 2px solid #FAFAFA;
+}
+
+.dot {
+	height: 8px;
+	width: 8px;
+	border-radius: 50%;
+}
+
+.mantine-Tooltip-tooltip { display: none; }
+
+.one { background-image: linear-gradient(orange,brown); }
+.two { background-image: linear-gradient(orange,yellow); }
+.five {	background-image: linear-gradient(lime,#00AD37); }
+.ten { background-image: linear-gradient(cyan, royalblue); }
+.fifteen { background-image: linear-gradient(red, #9C002B); }
+.twentyfive { background-image: linear-gradient(#ed6ea0, #711EAA); }
+
+.thumb {
+	width: 64px;
+	border-radius: .2rem;
+}
+
+.thumb:hover {
+	cursor: -moz-zoom-in !important; 
+	cursor: url("../assets/cursor.svg"), -webkit-zoom-in !important; 
+	cursor: url("../assets/cursor.svg"), zoom-in !important;
+}
+
+#react-modal-image-img { border-radius: 1rem; }
+
+.mantine-YearPickerInput-root { flex: 1; }
+
+.mantine-YearPickerInput-input {
+	border: none;
+	background: none;
+	border-radius: 0;
+	box-sizing:border-box;
+	text-transform: uppercase;
+	border-bottom: 2px solid #eee;
+	font-family: 'Roboto Mono', sans-serif;
+	font-weight: bold;
+	font-size: .75rem;
+	text-align: center;
+	margin-top: 2px;
+}
+
+.mantine-List-itemWrapper { width: 100%; }
+
+.mantine-YearPickerInput-input span { font-family: 'Roboto Mono', sans-serif; }
+
+.mantine-Switch-thumb {
+	border-radius: .2rem;
+    margin-left: .1rem;
+	background-color: #FAFAFA !important;
+}
+
+.mantine-Switch-labelWrapper > label {
+	cursor: pointer;
+	color:  rgba(26, 27, 30, 0.75) !important;
+}
+
+.mantine-Drawer-content { padding-top: 32px; }
+
+input:checked + .mantine-Switch-track > .mantine-Switch-thumb { margin-left: -.1rem; }
+
+.mantine-Switch-track { background: rgba(26, 27, 30, 0.75) !important; }
+
+::-webkit-scrollbar {
+  width: .5rem;
+  background-color: #1A1B1E;
+}
+
+::-webkit-scrollbar-thumb { background-color: #FAFAFA; }
+::-webkit-scrollbar-thumb:hover { background-color: #FAFAFA; }
+.mrt-row-actions { text-align: 'center'; }
+
+.link {
+	font-size: .75rem;
+	padding: .2rem .4rem;
+	height: auto;
+}
+
+.empty .mantine-Switch-thumb { background: rgba(255, 255, 255, 0.1) !important; }

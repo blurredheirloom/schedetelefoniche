@@ -1,0 +1,119 @@
+{
+  "name": "com.emme.schede",
+  "productName": "Schede Telefoniche",
+  "version": "1.6.0",
+  "private": true,
+  "author": {
+    "name": "Matteo Stracquadanio",
+    "email": "m.emmeesse.s@gmail.com",
+    "url": "https://blurredheirloom.github.io/cv/"
+  },
+  "description": "Catalogo Schede Telefoniche",
+  "homepage": "./",
+  "main": "main.js",
+  "engines": {
+    "node": ">=9.0.0",
+    "npm": ">=5.0.0",
+    "yarn": ">=1.0.0"
+  },
+  "browserslist": [
+    "last 1 electron version"
+  ],
+  "build": {
+    "appId": "com.emme.schede",
+    "productName": "Schede Telefoniche",
+    "icon": "./icon.png",
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "extraResources": [
+      "./node_modules/@electron/remote/**"
+    ],
+    "directories": {
+      "buildResources": "build",
+      "output": "dist"
+    },
+    "win": {
+      "icon": "./icon.ico",
+      "target": "nsis"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "blurredheirloom",
+      "repo": "schedetelefoniche",
+      "vPrefixedTagName": true
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "linux": {
+      "target": "deb"
+    }
+  },
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack serve --hot --host 0.0.0.0 --config=./webpack.dev.config.js --mode development",
+    "build": "cross-env NODE_ENV=production webpack --config webpack.build.config.js --mode production && electron-forge start",
+    "package": "electron-forge package -- platform linux win32",
+    "publish": "cross-env NODE_ENV=production webpack --config webpack.build.config.js && electron-forge publish -- platform linux win32",
+    "make-win": "electron-forge make --platform win32 --targets @electron-forge/maker-squirrel",
+    "make-win-zip": "electron-forge make --platform win32 --targets @electron-forge/maker-zip",
+    "make-linux": "electron-forge make --platform linux --targets @electron-forge/maker-deb"
+  },
+  "dependencies": {
+    "@getstation/electron-google-oauth2": "^14.0.0",
+    "custom-electron-titlebar": "^4.2.3",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-store": "^8.1.0",
+    "update-electron-app": "^2.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.2",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "@electron-forge/cli": "^6.1.1",
+    "@electron-forge/maker-deb": "^6.1.1",
+    "@electron-forge/maker-rpm": "^6.1.1",
+    "@electron-forge/maker-squirrel": "^6.1.1",
+    "@electron-forge/maker-zip": "^6.1.1",
+    "@electron-forge/publisher-github": "^6.1.1",
+    "@emotion/react": "^11.11.1",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@mantine/core": "^6.0.11",
+    "@mantine/dates": "^6.0.11",
+    "@mantine/form": "^6.0.13",
+    "@mantine/hooks": "^6.0.11",
+    "@react-pdf/renderer": "^3.1.9",
+    "@tabler/icons-react": "^2.20.0",
+    "babel-loader": "9.1.2",
+    "copy-webpack-plugin": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.1",
+    "dayjs": "^1.11.7",
+    "electron": "^25.1.0",
+    "file-loader": "^6.2.0",
+    "file-saver": "^2.0.5",
+    "firebase": "^9.22.1",
+    "hash-index": "^3.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "mantine-react-table": "^1.0.0-beta.8",
+    "mini-css-extract-plugin": "^2.6.0",
+    "moment": "^2.29.4",
+    "postcss": "^8.4.8",
+    "postcss-loader": "^7.0.0",
+    "promise-worker": "^2.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-localization": "^1.0.19",
+    "react-modal-image": "^2.6.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1",
+    "worker-loader": "^3.0.8"
+  }
+}

@@ -1,0 +1,24 @@
+name: Windows Release
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+
+  publish_on_win:
+    environment: release
+    permissions: write-all
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@master
+      with:
+        node-version: 16
+    - name: Install dependencies
+      run: npm install
+    - name: Publish
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        npm run publish
